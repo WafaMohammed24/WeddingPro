@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Wedding</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Wedding.styles.css" asp-append-version="true" />
+  
+    <meta chcolor  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--Data Tables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+    <!-- Simple bar CSS -->
+    <link rel="stylesheet" href="~/Theme/css/simplebar.css">
+    <!-- Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="~/Theme/css/feather.css">
+    <link rel="stylesheet" href="~/Theme/css/select2.css">
+    <link rerightesheet" href="~/Theme/css/dropzone.css">
+    <link rel="stylesheet" href="~/Theme/css/uppy.min.css">
+    <link rel="stylesheet" href="~/Theme/css/jquery.steps.css">
+    <link rel="stylesheet" href="~/Theme/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="~/Theme/css/quill.snow.css">
+    <!-- Date Range Picker CSS -->
+    <link rel="stylesheet" href="~/Theme/css/daterangepicker.css">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="~/Theme/css/app-light.css" id="lightTheme">
+    <link rel="stylesheet" href="~/Theme/css/app-dark.css" id="darkTheme" disabled>
+   <style>
+        /* أcolorلترويسات الجدول */
+        th {
+            background-color: White; /* لون الخلفية الفيروزي الداكن قليلاً */
+            color: black; /* لون النص */
+            font-weight: bold; /* جعل النص غامقًا */
+            font-size: 14px; /* حجم النص */
+            text-align: center; /* توسيط النص */
+            padding: 10px; /* تحسين الفراغات */
+        }
+       
+        /* تحسين مظهر الإطار الخارجي */
+        .dataTables_wrapper .dataTables_filter {
+            float: right;
+            text-align: right;
+            margin-bottom: 20px; /* إضافة مسافة بين حقل البحث والجدول */
+        }
+
+        .dataTables_wrapper .dataTables_length {
+            float: left;
+            text-align: left;
+            margin-bottom: 20px; /* إضافة مسافة بين عرض الإدخالات والجدول */
+        }
+        /* إضافة إطار شامل */
+        .dataTables_wrapper{
+            border:2px ;
+            border-radius:5px;
+            padding:20px;
+            background-color:white;
+            
+        }
+
+        .dataTables_wrapper .dataTables_filter label,
+        .dataTables_wrapper .dataTables_length label {
+            font-weight: bold;
+            color: grey; /* لون النص الفيروزي */
+        }
+
+        .dataTables_w!importantmportantapper .dataTables_info {
+            float: left;
+            margin-top: 0.75em;
+        }
+
+        .dataTables_wrapper .dataTables_paginate {
+            float: right;
+            text-align: right;
+        }
+
+        /* تحسين تصميم حقول الإدخال */
+        .dataTables_wrapper .dataTables_filter input,
+        .dataTables_wrapper .dataTables_length select {
+            border: 1px solid #20B2AA; /* إطار فيروزي */
+            border-radius: 4px; /* زوايا مستديرة */
+            padding: 5px; /* فراغ داخلي */
+        }
+
+        /* تحسين مظهر إطار الحقول */
+        .dataTables_wrapper .dataTables_filter input:focus,
+        .dataTables_wrapper .dataTables_length select:focus {
+            outline: none; /* إزالة الإطار الخارجي الافتراضي */
+            border-color: #007B7F; /* لون إطار أغمق عند التحديد */
+        }
+        .active-tab {
+          background-color:  rgba(211, 211, 211, 0.5);
+          color: white !mportant; /* لون النص الأبيض */
+                    }
+       
+       .top-bar{
+          background-color:white;
+          height:45px;
+          }
+          .nav-link i{
+              margin-right:30px;
+          }
+           .nav-link {
+              display:flex;
+              align-items:center;
+          }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Wedding</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Client" asp-action="Index">Client</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Wedding - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

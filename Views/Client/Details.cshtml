@@ -1,0 +1,83 @@
+﻿@model Wedding.Models.Client
+@{
+    Layout = "_Layout";
+}
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a asp-controller="Home" asp-action="Index"> Dashboard </a>
+        </li>
+        <li class="breadcrumb-item ">  <a asp-controller="Client" asp-action="Index"> Client </a> </li>
+        <li class="breadcrumb-item active">  Details </li>
+    </ol>
+    @if (TempData.ContainsKey("msg"))
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["msg"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="alert-danger" asp-validation-summary="All"></div>
+    <div class="card">
+        <div class="card-header">
+            <h4> Client Details</h4>
+        </div>
+        <div class="card-body">
+<dl class="row" enctype="multipart/form-data">
+       <div class="col-md-6">
+      <div class="row">
+        <div class="form-group  col-md-6">
+    <dt class="control-label">
+        @Html.DisplayNameFor(model=>model.ClientId)
+    </dt>
+    <dd class="form-control">
+        @Html.DisplayFor(model=>model.ClientId)
+    </dd> </div>
+
+    <div class="form-group  col-md-6">
+    <dt class="control-label">
+        @Html.DisplayNameFor(model=>model.FullName)
+    </dt>
+    <dd class="form-control">
+        @Html.DisplayFor(model=>model.FullName)
+    </dd></div>
+    
+    <div class="form-group  col-md-6">
+    <dt class="control-label">
+        @Html.DisplayNameFor(model=>model.PhoneNumber)
+    </dt>
+    <dd class="form-control">
+        @Html.DisplayFor(model=>model.PhoneNumber)
+    </dd> </div>
+
+    <div class="form-group  col-md-6">
+    <dt class="control-label">
+        @Html.DisplayNameFor(model=>model.Address)
+    </dt>
+    <dd class="form-control">
+        @Html.DisplayFor(model=>model.Address)
+    </dd></div>
+
+    <div class="form-group  col-md-6">
+     <dt class="control-label">
+        @Html.DisplayNameFor(model=>model.Email)
+    </dt>
+    <dd class="form-control" >
+        @Html.DisplayFor(model=>model.Email)
+    </dd></div>
+
+        <div class="form-group  col-md-6">
+     <dt class="control-label">
+        @Html.DisplayNameFor(model=>model.PasswordHash)
+    </dt>
+    <dd class="form-control" >
+        @Html.DisplayFor(model=>model.PasswordHash)
+    </dd></div>
+
+   
+</dl>
+       
+ <a asp-action="Index" class="btn btn-primary"> Back</a>
+   
+     
